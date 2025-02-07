@@ -69,6 +69,15 @@ jobs:
       run: g++ file.cpp
     - name: run a one line script
       run: "deply job"
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v4.1.8
+      with:
+        name:  Build-Artifact
+        #path: ${{github.workspace}}
+        path: ./a.out
+        
+        
+        
     #- name: configure
     #  run: ./configure
     #- name: make
