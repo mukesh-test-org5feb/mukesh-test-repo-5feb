@@ -69,11 +69,11 @@ int main() {
         }
 
         result = calculate(num1, num2, operation);
-
+        /*
         if (!std::isnan(result)) {
             std::cout << "Result: " << result << std::endl;
         }
-
+        */
         std::cout << "Do you want to perform another calculation? (y/n): ";
         std::cin >> choice;
     } while (choice == 'y' || choice == 'Y');
