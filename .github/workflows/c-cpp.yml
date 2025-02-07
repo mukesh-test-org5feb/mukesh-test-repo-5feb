@@ -34,7 +34,8 @@ jobs:
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.6.0
-      #with:
+      with:
+      name: Build-Artifact
       path: $((github.workspace))
 
   test:
