@@ -30,4 +30,22 @@ jobs:
     #  run: make check
     #- name: make distcheck
     #  run: make distcheck
+
+  test:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: compile
+      run: g++ file.cpp
+    #- name: configure
+    #  run: ./configure
+    #- name: make
+    #  run: make
+    #- name: make check
+    #  run: make check
+    #- name: make distcheck
+    #  run: make distcheck
+
     
