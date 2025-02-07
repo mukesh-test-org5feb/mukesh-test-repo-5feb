@@ -6,8 +6,12 @@ on:
   pull_request:
     branches: [ "main" ]
 
-#woekflow fispatch
+#workflow fispatch
 #workflow-dispatch
+
+schedule:
+  - cron: "0 2 * * 1-5"
+  
 
 jobs:
   build:
