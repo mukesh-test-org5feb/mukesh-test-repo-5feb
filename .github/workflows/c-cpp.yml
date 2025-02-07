@@ -39,6 +39,8 @@ jobs:
         #path: ${{github.workspace}}
         path: ./a.out
 
+        
+
   test:
 
     runs-on: windows-latest
@@ -48,6 +50,25 @@ jobs:
     - uses: actions/checkout@v4
     - name: compile
       run: g++ file.cpp
+    #- name: configure
+    #  run: ./configure
+    #- name: make
+    #  run: make
+    #- name: make check
+
+  deploy:
+
+    runs-on: windows-latest
+    environment:
+      name: test-env
+    needs: test
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: compile
+      run: g++ file.cpp
+    - name: run a one line script
+      run: "deply job"
     #- name: configure
     #  run: ./configure
     #- name: make
