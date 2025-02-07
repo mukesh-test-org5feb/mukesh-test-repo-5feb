@@ -8,7 +8,7 @@ on:
 
 jobs:
   job1: 
-    uses: .github/workflows/c-cpp.yml
+    uses: mukesh-test-repo-5feb/.github/workflows/c-cpp.yml
   build:
 
     runs-on: ubuntu-latest
